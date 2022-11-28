@@ -102,6 +102,114 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+
+    // Grab elements after DOM loads
+    window.addEventListener('DOMContentLoaded', init);
+    function init() {
+    
+      // Console Log Event Listener
+      consoleLog = errorBtns[0];
+      consoleLog.addEventListener('click', (e) => {
+        console.log('Console Log Demo');
+      });
+      // Console Error Event Listener
+      consoleError = errorBtns[1];
+      consoleError.addEventListener('click', (e) => {
+        console.error('Console Error Demo');
+      });
+
+      // Console Count Event Listener
+      consoleCount = errorBtns[2];
+      consoleCount.addEventListener('click', (e) => {
+        console.count();
+      });
+
+      // Console Warn Event Listener
+      consoleWarn = errorBtns[3];
+      consoleWarn.addEventListener('click', (e) => {
+        console.warn('Console Warn Button');
+      });
+
+      // Console Assert Event Listener
+      consoleAssert = errorBtns[4];
+      consoleAssert.addEventListener('click', (e) => {
+        const errorMsg = "The number does not equal 3"
+        let number = 2;
+        console.assert(2 == 3, {number, errorMsg});
+      });
+
+      // Console Clear Event Listener
+      consoleClear = errorBtns[5];
+      consoleClear.addEventListener('click', (e) => {
+        console.clear();
+      });
+
+      // Console Dir Event Listener
+      consoleDir = errorBtns[6];
+      consoleDir.addEventListener('click', (e) => {
+        console.dir(consoleDir);
+      });
+
+      // Console Dirxml Event Listener
+      consoleDirxml = errorBtns[7];
+      consoleDirxml.addEventListener('click', (e) => {
+        console.dirxml(consoleDir);
+      });
+
+      // Console Group Start Event Listener
+      consoleGrpStrt = errorBtns[8];
+      consoleGrpStrt.addEventListener('click', (e) => {
+        console.group();
+      });
+
+      // Console Group End Event Listener
+      consoleGrpEnd = errorBtns[9];
+      consoleGrpEnd.addEventListener('click', (e) => {
+        console.groupEnd();
+      });
+
+      // Console Table Event Listener
+      consoleTable = errorBtns[10];
+      consoleTable.addEventListener('click', (e) => {
+        softEng = {
+          name: 'Software Engineering',
+          num: 150
+        }
+        proLang = {
+          name: 'Programming Languages',
+          num: 130
+        }
+        advSoft = {
+          name: 'Advanced Software Development',
+          num: 112
+        }
+        console.table([softEng, proLang, advSoft]);
+      });
+
+      // Console Start Timer Event Listener
+      consoleStartTimer = errorBtns[11];
+      consoleStartTimer.addEventListener('click', (e) => {
+        console.time();
+      });
+
+      // Console End Timer Event Listener
+      consoleEndTimer = errorBtns[12];
+      consoleEndTimer.addEventListener('click', (e) => {
+        console.timeEnd();
+      });
+      
+      // Console Trace Event Listener
+      consoleTrace = errorBtns[13];
+      consoleTrace.addEventListener('click', (e) => {
+        console.trace();
+      });
+
+      // Console Trigger Global Error Event Listener
+      consoleTrigGlobErr = errorBtns[14];
+      consoleTrigGlobErr.addEventListener('click', (e) => {
+        console.err();
+      });
+    }
   </script>
 </body>
 
