@@ -102,6 +102,11 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+    
+    // Event Listener for Any Error (Step 5)
+    window.addEventListener('error', function(e) {
+      console.log("Sadly an error happened my amigo.");
+    });
 
     // Grab elements after DOM loads
     window.addEventListener('DOMContentLoaded', init);
@@ -209,6 +214,15 @@
       consoleTrigGlobErr.addEventListener('click', (e) => {
         console.err();
       });
+    }
+
+    // Intentionally testing Try, Catch, and Finally (Step 3 and 4)
+    try {
+      input1 = document.querySelector(first-num);
+    } catch (err) {
+      console.log("[ERROR] The error was: " + err);
+    } finally {
+      console.log("Oh noes, there was a an error there Chief.")
     }
   </script>
 </body>
